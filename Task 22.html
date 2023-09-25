@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form>
+    <br><input type="button" onClick="show_time()" Value="show date" ></br>
+    <br><input type="button" onClick="show_date()" Value="show time" ></br>
+   
+</form>
+
+<p id="long"></p>
+<p id ="short"></p>
+
+<script>
+function show_date()
+{
+const d = new Date();
+document.getElementById("long").innerHTML = d;
+}
+
+function show_time()
+{
+const date = new Date();
+
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+
+
+let currentDate = `${day}/${month}/${year}`;
+document.getElementById("short").innerHTML = currentDate;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#start").click(function(){
+    $("div").animate({left: '100px'}, 5000);
+
+  });
+  
+  $("#stop").click(function(){
+    $("div").stop();
+  });
+
+
+});
+</script> 
+</head>
+<body>
+
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+
+
+<p>The "Start" button starts the animation.</p>
+<p>The "Stop" button stops the current active animation, but allows the queued animations to be performed afterwards.</p>
+
+<div style="background:#98bf21;height:100px;width:200px;position:absolute;">Task 26</div>
+
+</body>
+</html>

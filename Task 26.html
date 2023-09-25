@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>JavaScript Form Validation using a sample registration form</title>
+<meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
+<meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
+<link rel='stylesheet' href='js-form-validation.css' type='text/css' />
+<script src="sample-registration-form-validation.js"></script>
+
+<style>
+    h1 {
+margin-left: 260px;
+}
+form li {
+list-style: none;
+margin-bottom: 5px;
+}
+
+form ul li label{
+float: left;
+clear: left;
+width: 200px;
+text-align: right;
+margin-right: 10px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:14px;
+}
+
+form ul li input, select, span {
+float: left;
+margin-bottom: 10px;
+}
+
+form textarea {
+
+float: left;
+width: 350px;
+height: 80px;
+margin-bottom: 10px;
+}
+
+[type="submit"] {
+clear: left;
+margin: 20px 0 0 230px;
+font-size:16px
+}
+
+p {
+margin-left: 70px;
+font-weight: bold;
+}
+
+</style>
+
+
+</head>
+<body onload="document.registration.userid.focus();">
+<h1>Registration Form</h1>
+<form name='registration' onSubmit="return formValidation();">
+<ul>
+<li><label for="First Name">First Name:</label></li>
+<li><input type="text" name="First Name" size="50" required/></li>
+<li><label for="Last Name">Last Name:</label></li>
+<li><input type="text" name="Last Name" size="50" required/></li>
+<li><label for="First Name">Email:</label></li>
+<li><input type="email" name="email" size="50"required /></li>
+<li><label for="passid">Password:</label></li>
+<li><input type="password" name="passid" size="50" required/></li>
+<li><label for="passid">Re-enter Password:</label></li>
+<li><input type="password" name="passid" size="50" required/></li>
+<li><label id="gender">Gender:</label></li>
+<li><input type="radio" name="msex" value="Male" /><span>Male</span></li>
+<li><input type="radio" name="fsex" value="Female" /><span>Female</span></li>
+<li><label for="age">Age:</label></li>
+<li><input type="number" name="age" size="50" required/></li>
+<li><label for="ph">Phone Number:</label></li>
+<li><input type="number" name="ph" size="50" required/></li>
+<li><label for="desc">Address:</label></li>
+<br><textarea name="desc" id="desc" ></textarea></br>
+<li><label for="state">State:</label></li>
+<li><input type="text" name="state" size="50" required/></li>
+<li><label for="country">Country:</label></li>
+<li><select name="country">
+<option selected="" value="Default">(Please select a country)</option>
+<option value="IN">India</option>
+<option value="CA">Canada</option>
+<option value="US">USA</option>
+<option value="RU">Russia</option>
+<option value="CH">China</option>
+</select></li>
+<br>
+
+<li><label>Languages known:</label></li>
+<li><input type="checkbox" name="en" value="en" /><span>English</span></li>
+<li><input type="checkbox" name="ka" value="ka" /><span>Kannada</span></li>
+<li><input type="checkbox" name="hi" value="hi"  /><span>Hindi</span></li>
+<li><input type="checkbox" name="te" value="te" /><span>Telugu</span></li>
+
+<li><label>‎ </label>
+    <input type ="checkbox"><span>Hereby I declare all the given  details are true</span></li>
+
+<li><input type="submit" name="register" value="Register" /></li>
+</ul>
+</form>
+</body>
+</html>
